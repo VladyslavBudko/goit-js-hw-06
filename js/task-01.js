@@ -7,9 +7,7 @@ listWithLiItemAll.forEach((item) => {
   const listWithH2 = item.querySelector("h2");
   const listWithLi = item.querySelectorAll("li");
   console.log(`Category: `, listWithH2.textContent);
-  console.log(listWithH2);
   console.log(`Elements: `, listWithLi.length);
-  console.log(listWithLi);
 });
 
 // console.log(`!!!!!!!!!!!!`);
@@ -21,4 +19,4 @@ listWithLiItemAll.forEach((item) => {
 //     console.log(listWithH2);
 //   console.log(`Elements: `, listWithLi.length);
 //     console.log(listWithLi);
-// }
+// };
