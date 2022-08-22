@@ -18,7 +18,9 @@ const makeImageEl = (image) => {
 
   return `
 <li>
-  <img class="galery__img" src = ${url} alt = ${alt}>
+  <img class="gallery__img" 
+  width = 100%
+  src = ${url} alt = ${alt} >
 </li>
 `;
 };
