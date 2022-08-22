@@ -28,12 +28,8 @@ const makeImageEl = (image) => {
 const imagesEl = document.querySelector(".gallery");
 const makeImagesEl = images.map(makeImageEl).join("");
 
-console.log(makeImagesEl);
+// console.log(makeImagesEl);
 
 imagesEl.insertAdjacentHTML("beforeend", makeImagesEl);
 
-// const crateImagesFn = () => {
-//   images.map( image => {
-//     imagesEl.insertAdjacentElement(beforeend, {url, alt} )
-//   })
-// }
+
