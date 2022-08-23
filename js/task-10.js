@@ -15,22 +15,25 @@ const numberEl = document.querySelector("input");
 createEl.addEventListener("click", onCreateClick);
 
 function onCreateClick(event) {
-  const numberOfDiv = Number(numberEl.value);
+  const numberOfDiv = numberEl.value;
   createBoxes(numberOfDiv);
 }
 
 function createBoxes(amount) {
   const squereAll = document.createElement("div");
-  // const styleEl = document.createElement("style");
+  squereAll.classList.add("main-div");
+
 
   for (let i = 0; i < amount; i += 1) {
     const squereItem = document.createElement("div");
-    squereItem.classList.add("squere-param");
+    squereItem.classList.add("item-div");
     squereItem.style.width = 30 + 10 * i + "px";
     squereItem.style.height = 30 + 10 * i + "px";
     squereItem.style.backgroundColor = getRandomHexColor();
 
     squereAll.appendChild(squereItem);
+    console.log(squereItem);
+
   }
 
   console.log(squereAll);
