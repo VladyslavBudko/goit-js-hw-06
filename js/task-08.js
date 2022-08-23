@@ -10,22 +10,24 @@ refs.form.addEventListener("submit", onFormSubmitBtn);
 function onFormSubmitBtn(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+
+  if (email.value !== "" && password.value !== "") {
+    console.log("name:", email.value, "value:", password.value);
+  } else alert("Input data");
+
+  // const formData = new FormData(event.currentTarget);
   //   console.log(formData);
 
-  formData.forEach((value, name) => {
-    if (value || name === " ") {
-      alert("Input data");
-      document.location.reload();
-    }
+  // formData.forEach((value, name) => {
+  //   if (value === "") {
+  //     alert("Input data");
+  //     // document.location.reload();
+  //   }
 
-    console.log("name:", name);
-    console.log("value:", value);
-  });
-
-  //   const {
-  //     elements: { email, password },
-  //   } = event.currentTarget;
-  //   console.log(email.value, password.value);
-  //   console.dir(event.currentTarget);
+  //   console.log("name:", name);
+  //   console.log("value:", value);
+  // });
 }
