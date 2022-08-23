@@ -23,7 +23,6 @@ function createBoxes(amount) {
   const squereAll = document.createElement("div");
   squereAll.classList.add("main-div");
 
-
   for (let i = 0; i < amount; i += 1) {
     const squereItem = document.createElement("div");
     squereItem.classList.add("item-div");
@@ -32,13 +31,12 @@ function createBoxes(amount) {
     squereItem.style.backgroundColor = getRandomHexColor();
 
     squereAll.appendChild(squereItem);
-    console.log(squereItem);
+    // console.log(squereItem);
 
   }
 
-  console.log(squereAll);
-
   boxesEl.appendChild(squereAll);
+  // console.log(squereAll);
 }
 
 destroyEl.addEventListener("click", destroyBoxes);
