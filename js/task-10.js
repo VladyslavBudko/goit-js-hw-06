@@ -27,8 +27,8 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     const squereItem = document.createElement("div");
     squereItem.classList.add("item-div");
-    squereItem.style.width = 30 + 10 * i + "px";
-    squereItem.style.height = 30 + 10 * i + "px";
+    squereItem.style.width = (30 + 10 * i) + "px";
+    squereItem.style.height = (30 + 10 * i) + "px";
     squereItem.style.backgroundColor = getRandomHexColor();
 
     squereAll.appendChild(squereItem);
