@@ -17,7 +17,7 @@ const makeImageEl = (image) => {
   const { url, alt } = image;
 
   return `
-<li>
+<li style=" list-style: none; margin-left: 20px;">
   <img class="gallery__img" 
   width = 100%
   src = ${url} alt = ${alt} >
@@ -26,10 +26,9 @@ const makeImageEl = (image) => {
 };
 
 const imagesEl = document.querySelector(".gallery");
+imagesEl.style = `display: flex; flex-wrap: nowrap;`;
 const makeImagesEl = images.map(makeImageEl).join("");
 
 // console.log(makeImagesEl);
 
 imagesEl.insertAdjacentHTML("beforeend", makeImagesEl);
-
-
