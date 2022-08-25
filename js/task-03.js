@@ -16,11 +16,13 @@ const images = [
 const makeImageEl = (image) => {
   const { url, alt } = image;
 
+  // console.log(alt);
+
   return `
 <li style=" list-style: none; margin-left: 20px;">
   <img class="gallery__img" 
   width = 100%
-  src = ${url} alt = ${alt} >
+  src = '${url}' alt = "${alt}" >
 </li>
 `;
 };
