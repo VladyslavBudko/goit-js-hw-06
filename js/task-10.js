@@ -19,26 +19,23 @@ function onCreateClick(event) {
   createBoxes(numberOfDiv);
 }
 
-let squereHeight = 0;
+let squereHeight = 30;
 
 function createBoxes(amount) {
   const squereAll = document.createElement("div");
   squereAll.classList.add("main-div");
 
-
   for (let i = 0; i < amount; i += 1) {
-
     const squereItem = document.createElement("div");
     squereItem.classList.add("item-div");
-    squereItem.style.width = (30 + squereHeight) + "px";
-    squereItem.style.height = (30 + squereHeight) + "px";
+    squereItem.style.width = squereHeight + "px";
+    squereItem.style.height = squereHeight + "px";
     squereItem.style.backgroundColor = getRandomHexColor();
 
     squereAll.appendChild(squereItem);
     // console.log(squereItem);
 
     squereHeight = squereHeight + 10;
-
   }
 
   boxesEl.appendChild(squereAll);
